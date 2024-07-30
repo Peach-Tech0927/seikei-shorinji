@@ -2,7 +2,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
-import { styled } from "@mui/material";
+import { styled, useMediaQuery, useTheme } from "@mui/material";
 
 const FirstView = () => {
   const images = [
@@ -11,6 +11,8 @@ const FirstView = () => {
     "/1536*960.png",
     "/1536*960.png",
   ];
+  const theme = useTheme();
+  const isPCScreen = useMediaQuery(theme.breakpoints.up("md"));
 
   return (
     <Swiper
@@ -25,7 +27,7 @@ const FirstView = () => {
         disableOnInteraction: false,
       }}
       modules={[Autoplay, Pagination]}
-      style={{ height: "80vh" }}
+      style={{ height: isPCScreen ? "80vh" : "auto" }}
     >
       {images.map((src) => (
         <SwiperSlide key={src}>
@@ -36,7 +38,7 @@ const FirstView = () => {
   );
 };
 
-const StyledImage = styled("img")(() => ({
+const StyledImage = styled("img")(({ theme }) => ({
   width: "100%",
   height: "100%",
   objectFit: "cover",
