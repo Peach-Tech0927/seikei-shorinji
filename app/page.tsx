@@ -1,9 +1,11 @@
-import FirstView from "./components/home/introduction/SlideFirstView";
+import PartnerRecruit from "./components/home/PartnerRecruit";
+import SlideFirstView from "./components/home/introduction/SlideFirstView";
 
 const SeikeiShorinji = () => {
   return (
     <>
-      <FirstView />
+      <SlideFirstView />
+      <PartnerRecruit />
     </>
   );
 };
