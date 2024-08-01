@@ -4,7 +4,7 @@ import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import { styled, useMediaQuery, useTheme } from "@mui/material";
 
-const FirstView = () => {
+const SlideFirstView = () => {
   const images = [
     "/1536*960.png",
     "/1536*960.png",
@@ -44,4 +44,4 @@ const StyledImage = styled("img")(() => ({
   objectFit: "cover",
 }));
 
-export default FirstView;
+export default SlideFirstView;
