@@ -5,16 +5,24 @@ const PartnerRecruit = () => {
     <Box
       bgcolor={"#a20100"}
       width={"100%"}
-      height={250}
+      height={{ xs: 120, md: 250 }}
       display={"flex"}
       alignItems={"center"}
       justifyContent={"center"}
       flexDirection={"column"}
     >
-      <Typography color={"white"} fontSize={20} fontWeight={"bold"}>
+      <Typography
+        color={"white"}
+        fontSize={{ xs: 13, md: 20 }}
+        fontWeight={"bold"}
+      >
         パートナー募集
       </Typography>
-      <Typography color={"white"} fontSize={12} fontWeight={"bold"}>
+      <Typography
+        color={"white"}
+        fontSize={{ xs: 10, md: 16 }}
+        fontWeight={"bold"}
+      >
         PARTNER
       </Typography>
     </Box>
