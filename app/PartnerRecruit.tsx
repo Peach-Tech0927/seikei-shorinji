@@ -4,7 +4,7 @@ const PartnerRecruit = () => {
   return (
     <Box
       bgcolor={"#a20100"}
-      height={{ xs: 120, md: 250 }}
+      height={{ xs: "12vh", md: "30vh" }}
       display={"flex"}
       alignItems={"center"}
       justifyContent={"center"}
