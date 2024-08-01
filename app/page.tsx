@@ -1,3 +1,9 @@
+import PartnerRecruit from "./PartnerRecruit";
+
 export default function Home() {
-  return <div>test1</div>;
+  return (
+    <>
+      <PartnerRecruit />
+    </>
+  );
 }
