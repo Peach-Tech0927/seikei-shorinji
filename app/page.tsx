@@ -1,4 +1,4 @@
-import FirstView from "./components/home/introduction/first-view";
+import FirstView from "./components/home/introduction/SlideFirstView";
 
 const SeikeiShorinji = () => {
   return (
