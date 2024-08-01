@@ -1,3 +1,10 @@
-export default function Home() {
-  return <div>test1</div>;
-}
+import SlideFirstView from "./components/home/introduction/SlideFirstView";
+
+const SeikeiShorinji = () => {
+  return (
+    <>
+      <SlideFirstView />
+    </>
+  );
+};
+export default SeikeiShorinji;
