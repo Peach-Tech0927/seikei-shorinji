@@ -1,5 +1,7 @@
 import { AppBar, Toolbar, Typography, Link, Box } from "@mui/material";
 import Image from "next/image";
+import React from "react";
+import CustomLink from "./CustomLink";
 
 const Header = () => {
   return (
@@ -18,118 +20,13 @@ const Header = () => {
           </Typography>
         </Box>
         <Box>
-          <Link
-            href="/home"
-            underline="none"
-            color="white"
-            px={2}
-            sx={{
-              cursor: "pointer",
-              display: "inline-block",
-              transition: "transform 0.3s ease",
-              "&:hover": {
-                transform: "scale(1.3)",
-              },
-            }}
-          >
-            HOME
-          </Link>
-          <Link
-            href="/about"
-            underline="none"
-            color="white"
-            px={2}
-            sx={{
-              cursor: "pointer",
-              display: "inline-block",
-              transition: "transform 0.3s ease",
-              "&:hover": {
-                transform: "scale(1.3)",
-              },
-            }}
-          >
-            ABOUT
-          </Link>
-          <Link
-            href="/member"
-            underline="none"
-            color="white"
-            px={2}
-            sx={{
-              cursor: "pointer",
-              display: "inline-block",
-              transition: "transform 0.3s ease",
-              "&:hover": {
-                transform: "scale(1.3)",
-              },
-            }}
-          >
-            MEMBER
-          </Link>
-          <Link
-            href="/match"
-            underline="none"
-            color="white"
-            px={2}
-            sx={{
-              cursor: "pointer",
-              display: "inline-block",
-              transition: "transform 0.3s ease",
-              "&:hover": {
-                transform: "scale(1.3)",
-              },
-            }}
-          >
-            MATCH
-          </Link>
-          <Link
-            href="/sns"
-            underline="none"
-            color="white"
-            px={2}
-            sx={{
-              cursor: "pointer",
-              display: "inline-block",
-              transition: "transform 0.3s ease",
-              "&:hover": {
-                transform: "scale(1.3)",
-              },
-            }}
-          >
-            SNS
-          </Link>
-          <Link
-            href="/news"
-            underline="none"
-            color="white"
-            px={2}
-            sx={{
-              cursor: "pointer",
-              display: "inline-block",
-              transition: "transform 0.3s ease",
-              "&:hover": {
-                transform: "scale(1.3)",
-              },
-            }}
-          >
-            NEWS
-          </Link>
-          <Link
-            href="/schedule"
-            underline="none"
-            color="white"
-            px={2}
-            sx={{
-              cursor: "pointer",
-              display: "inline-block",
-              transition: "transform 0.3s ease",
-              "&:hover": {
-                transform: "scale(1.3)",
-              },
-            }}
-          >
-            SCHEDULE
-          </Link>
+          <CustomLink href="/home">HOME</CustomLink>
+          <CustomLink href="/about">ABOUT</CustomLink>
+          <CustomLink href="/member">MEMBER</CustomLink>
+          <CustomLink href="/match">MATCH</CustomLink>
+          <CustomLink href="/sns">SNS</CustomLink>
+          <CustomLink href="/news">NEWS</CustomLink>
+          <CustomLink href="/schedule">SCHEDULE</CustomLink>
         </Box>
       </Toolbar>
     </AppBar>
