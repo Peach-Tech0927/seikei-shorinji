@@ -1,5 +1,5 @@
 const SeikeiShorinji = () => {
-  return <></>;
+  return <div>test1</div>;
 };
 
 export default SeikeiShorinji;
