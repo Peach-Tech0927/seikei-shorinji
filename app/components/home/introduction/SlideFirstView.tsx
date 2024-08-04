@@ -6,10 +6,10 @@ import { styled, useMediaQuery, useTheme } from "@mui/material";
 
 const SlideFirstView = () => {
   const images = [
-    "/1536*960.png",
-    "/1536*960.png",
-    "/1536*960.png",
-    "/1536*960.png",
+    "/1536-960.png",
+    "/1536-960.png",
+    "/1536-960.png",
+    "/1536-960.png",
   ];
   const theme = useTheme();
   const isPCScreen = useMediaQuery(theme.breakpoints.up("md"));
