@@ -3,7 +3,6 @@ import {
   AppBar,
   Toolbar,
   Typography,
-  Link,
   Box,
   useMediaQuery,
   useTheme,
@@ -22,43 +21,58 @@ const Header = () => {
       color="inherit"
       sx={{
         bgcolor: "#a20000",
-        height: 85,
-        [theme.breakpoints.down("sm")]: { height: 70 },
+        height: isMobile ? 70 : 85,
       }}
     >
       <Toolbar
         sx={{
           display: "flex",
-          flexDirection: isMobile ? "column" : "row",
+          flexDirection: isMobile ? "row" : "row",
           alignItems: "center",
           justifyContent: "space-between",
           height: "100%",
           textAlign: isMobile ? "center" : "left",
+          overflow: "hidden",
         }}
       >
         <Box
-          flexGrow={1}
           display="flex"
           alignItems="center"
           gap={2}
           py={isMobile ? 2 : 0}
           justifyContent={isMobile ? "center" : "flex-start"}
         >
-          <Image src="/Shorinji（仮）.jpg" alt="logo" width={70} height={70} />
-          {!isMobile && (
-            <Typography color="white" fontSize={17} lineHeight={1}>
-              Seikei
-              <br /> Shorinji
-              <br /> Club
-            </Typography>
-          )}
+          <Image
+            src="/Shorinji（仮）.jpg"
+            alt="logo"
+            width={70}
+            height={70}
+            style={{
+              marginTop: isMobile ? 10 : 0,
+              marginBottom: isMobile ? 10 : 0,
+            }}
+          />
+          <Typography
+            color="white"
+            fontSize={isMobile ? 12 : 17}
+            lineHeight={1}
+            display={isMobile ? "block" : "block"}
+            textAlign="center"
+          >
+            Seikei
+            <br /> Shorinji
+            <br /> Club
+          </Typography>
         </Box>
         <Box
           sx={{
             display: "flex",
-            flexDirection: isMobile ? "column" : "row",
+            flexDirection: isMobile ? "row" : "row",
             alignItems: "center",
             gap: isMobile ? 1 : 2,
+            overflowX: isMobile ? "auto" : "hidden",
+            overflowY: "hidden",
+            whiteSpace: "nowrap",
           }}
         >
           <CustomLink href="/home">HOME</CustomLink>
