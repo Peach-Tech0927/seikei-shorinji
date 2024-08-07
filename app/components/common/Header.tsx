@@ -1,25 +1,79 @@
-import { AppBar, Toolbar, Typography, Link, Box } from "@mui/material";
+"use client";
+import {
+  AppBar,
+  Toolbar,
+  Typography,
+  Box,
+  useMediaQuery,
+  useTheme,
+} from "@mui/material";
 import Image from "next/image";
 import React from "react";
 import CustomLink from "./CustomLink";
 
 const Header = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+
   return (
     <AppBar
       position="static"
       color="inherit"
-      sx={{ bgcolor: "#a20000", height: 85 }}
+      sx={{
+        bgcolor: "#a20000",
+        height: isMobile ? 70 : 85,
+      }}
     >
-      <Toolbar>
-        <Box flexGrow={1} display="flex" alignItems="center" gap={2} py={2}>
-          <Image src="/Shorinji（仮）.jpg" alt="logo" width={70} height={70} />
-          <Typography color="white" fontSize={17} lineHeight={1}>
+      <Toolbar
+        sx={{
+          display: "flex",
+          flexDirection: "row",
+          alignItems: "center",
+          justifyContent: "space-between",
+          height: "100%",
+          textAlign: isMobile ? "center" : "left",
+          overflow: "hidden",
+        }}
+      >
+        <Box
+          display="flex"
+          alignItems="center"
+          gap={2}
+          py={isMobile ? 2 : 0}
+          justifyContent={isMobile ? "center" : "flex-start"}
+        >
+          <Image
+            src="/Shorinji（仮）.jpg"
+            alt="logo"
+            width={70}
+            height={70}
+            style={{
+              margin: isMobile ? 10 : 0,
+            }}
+          />
+          <Typography
+            color="white"
+            fontSize={isMobile ? 12 : 17}
+            lineHeight={1}
+            display="block"
+            textAlign="center"
+          >
             Seikei
             <br /> Shorinji
             <br /> Club
           </Typography>
         </Box>
-        <Box>
+        <Box
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            alignItems: "center",
+            gap: isMobile ? "8px" : "16px",
+            overflowX: isMobile ? "auto" : "hidden",
+            overflowY: "hidden",
+            whiteSpace: "nowrap",
+          }}
+        >
           <CustomLink href="/home">HOME</CustomLink>
           <CustomLink href="/about">ABOUT</CustomLink>
           <CustomLink href="/member">MEMBER</CustomLink>
