@@ -1,0 +1,108 @@
+.appBar {
+  background-color: #a20000;
+  height: 85px;
+}
+
+.toolbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  overflow: hidden;
+}
+
+.boxLogo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-top: 0;
+  padding-bottom: 0;
+  flex: 1;
+}
+
+.menuButton {
+  color: #ffffff;
+}
+
+.image {
+  margin: 0;
+}
+
+.typography {
+  color: white;
+  font-size: 17px;
+  line-height: 1;
+  text-align: left;
+}
+
+.navLinks {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  .appBar {
+    height: 70px;
+  }
+
+  .toolbar {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .boxLogo {
+    gap: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    flex: 0;
+  }
+
+  .image {
+    margin: 0;
+  }
+
+  .typography {
+    font-size: 12px;
+    text-align: left;
+  }
+
+  .navLinks {
+    display: none;
+  }
+
+  .MuiDrawer-paper {
+    width: 250px;
+  }
+
+  .drawerContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+  }
+
+  .drawerList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .MuiListItem-root {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+}
