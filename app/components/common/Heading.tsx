@@ -11,6 +11,7 @@ const Heading: React.FC<Tprops> = ({ title }) => {
       alignItems={"flex-start"}
       justifyContent={"center"}
       flexDirection={"column"}
+      width={"100%"}
     >
       <Typography
         component="h3"
@@ -20,7 +21,7 @@ const Heading: React.FC<Tprops> = ({ title }) => {
       >
         {title}
       </Typography>
-      <Box width="32%" height={1.5} bgcolor="#00154b" />
+      <Box width="100%" height={1.5} bgcolor="#00154b" />
     </Box>
   );
 };
