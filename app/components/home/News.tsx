@@ -3,7 +3,6 @@ import React, { Fragment } from "react";
 
 import { NewsData } from "./NewsData";
 import Heading from "../common/Heading";
-import { relative } from "path";
 
 const News = () => {
   return (
