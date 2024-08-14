@@ -11,15 +11,15 @@ const News = () => {
       <Grid
         container
         pt={{ xs: 10, md: 20 }}
-        pb={{ xs: 50, md: 36 }}
+        pb={{ xs: 6, md: 12 }}
         justifyContent={"center"}
-        spacing={{ xs: 45, md: 5 }}
+        spacing={{ xs: 3, md: 5 }}
       >
-        <Grid item xs={10} md={3.5} height={"30vh"}>
-          <Box position={"relative"} pb={{ xs: 3, md: 5 }}>
+        <Grid item xs={10} md={3.5}>
+          <Box pb={{ xs: 3, md: 5 }}>
             <Heading title="NEWS" />
           </Box>
-          <Box position={"relative"}>
+          <Box>
             {NewsData.map((data) => (
               <Fragment key={data.date}>
                 <Box marginLeft={1.2}>
@@ -27,7 +27,6 @@ const News = () => {
                 </Box>
                 <Divider
                   sx={{
-                    width: "100%",
                     marginTop: 2,
                     marginBottom: 2,
                     borderStyle: "dashed",
@@ -39,11 +38,11 @@ const News = () => {
             ))}
           </Box>
         </Grid>
-        <Grid item xs={10} md={3.5} height={"30vh"}>
-          <Box position={"relative"} pb={{ xs: 3, md: 5 }}>
+        <Grid item xs={10} md={3.5}>
+          <Box pb={{ xs: 3, md: 5 }}>
             <Heading title="NEWS" />
           </Box>
-          <Box position={"relative"}>
+          <Box>
             {NewsData.map((data) => (
               <Fragment key={data.date}>
                 <Box marginLeft={1.2}>
@@ -51,7 +50,6 @@ const News = () => {
                 </Box>
                 <Divider
                   sx={{
-                    width: "100%",
                     marginTop: 2,
                     marginBottom: 2,
                     borderStyle: "dashed",
