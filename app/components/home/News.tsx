@@ -1,9 +1,9 @@
-import { Box, Divider, Grid } from "@mui/material";
+import { Box, Divider, Grid, Typography } from "@mui/material";
 import React, { Fragment } from "react";
-
 import { NewsData } from "./NewsData";
 import Heading from "../common/Heading";
 import NewsCard from "./NewsCard";
+import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 
 const News = () => {
   return (
@@ -16,6 +16,22 @@ const News = () => {
         spacing={{ xs: 3, md: 5 }}
       >
         <Grid item xs={10} md={3.5}>
+          <Box
+            display={"flex"}
+            justifyContent={"flex-end"}
+            alignItems={"center"}
+            marginBottom={{ xs: -3.5, md: -4 }}
+            marginTop={{ md: 1 }}
+          >
+            <Typography
+              fontSize={{ xs: 13, md: 16 }}
+              fontWeight={"bold"}
+              color={"#a20100"}
+            >
+              MORE
+            </Typography>
+            <ChevronRightIcon fontSize="medium" sx={{ color: "#a20100" }} />
+          </Box>
           <Box pb={{ xs: 3, md: 5 }}>
             <Heading title="NEWS" />
           </Box>
