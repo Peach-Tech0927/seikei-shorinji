@@ -20,7 +20,7 @@ const Heading: React.FC<Tprops> = ({ title }) => {
       >
         {title}
       </Typography>
-      <Box width="25%" height={1.5} bgcolor="#00154b" />
+      <Box width="32%" height={1.5} bgcolor="#00154b" />
     </Box>
   );
 };
