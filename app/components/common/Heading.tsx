@@ -14,21 +14,13 @@ const Heading: React.FC<Tprops> = ({ title }) => {
     >
       <Typography
         component="h3"
-        fontSize={{ xs: 18, md: 30 }}
+        fontSize={{ xs: 18, md: 25 }}
         pb={0.5}
         fontWeight={"bold"}
       >
         {title}
       </Typography>
-      <Box
-        width={{
-          xs: 450,
-          md: 520,
-        }}
-        height={3}
-        bgcolor="#00154b"
-        borderRadius={0.5}
-      />
+      <Box width="25%" height={1.5} bgcolor="#00154b" />
     </Box>
   );
 };
