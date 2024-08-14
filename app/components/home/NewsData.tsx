@@ -3,7 +3,7 @@ export type NewsDataProps = {
   content: string;
 };
 
-export const NewsContentData: NewsDataProps[] = [
+export const NewsData: NewsDataProps[] = [
   {
     date: "2024.5.22",
     content: "大会 すごい 優勝",
