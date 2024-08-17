@@ -42,23 +42,18 @@ const Header = () => {
             alignItems: "center",
             justifyContent: "space-between",
             height: "100%",
-            overflow: "hidden",
           }}
         >
           <Box
             display={"flex"}
             alignItems={"center"}
             gap={{ xs: "10px", md: "16px" }}
-            paddingTop={{ xs: "5px", md: "0" }}
-            paddingBottom={{ xs: "5px", md: "0" }}
-            flex={{ xs: "0", md: "1" }}
           >
             <Image
               src="/Shorinji（仮）.jpg"
               alt="logo"
               width={70}
               height={70}
-              style={{ margin: 0 }}
             />
             <Typography
               color={"white"}
@@ -95,7 +90,7 @@ const Header = () => {
               color: "white",
             }}
           >
-            <MenuIcon sx={{ color: "white" }} />{" "}
+            <MenuIcon sx={{ color: "white" }} />
           </IconButton>
 
           <Drawer
@@ -110,11 +105,6 @@ const Header = () => {
               display={"flex"}
               flexDirection={"column"}
               alignItems={"center"}
-              padding={0}
-              margin={0}
-              role="presentation"
-              onClick={toggleDrawer(false)}
-              onKeyDown={toggleDrawer(false)}
             >
               <Box display={"flex"} justifyContent={"flex-end"} padding={2}>
                 <IconButton
@@ -132,9 +122,6 @@ const Header = () => {
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
-                  width: "100%",
-                  padding: 0,
-                  margin: 0,
                 }}
               >
                 {NavItemList.map((Item) => (
