@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { Fragment, useState } from "react";
 import {
   AppBar,
   Toolbar,
@@ -16,6 +16,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import Image from "next/image";
 import CustomLink from "./CustomLink";
 import NavItem from "./NavItem";
+import { NavItemList } from "@/app/data/NavItemList";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
@@ -77,13 +78,11 @@ const Header = () => {
             alignItems={"center"}
             overflow={"hidden"}
           >
-            <CustomLink href="/home">HOME</CustomLink>
-            <CustomLink href="/about">ABOUT</CustomLink>
-            <CustomLink href="/member">MEMBER</CustomLink>
-            <CustomLink href="/match">MATCH</CustomLink>
-            <CustomLink href="/sns">SNS</CustomLink>
-            <CustomLink href="/news">NEWS</CustomLink>
-            <CustomLink href="/schedule">SCHEDULE</CustomLink>
+            {NavItemList.map((Item) => (
+              <Fragment key={Item.href}>
+                <CustomLink href={Item.href}>{Item.title}</CustomLink>
+              </Fragment>
+            ))}
           </Box>
 
           <IconButton
@@ -138,13 +137,11 @@ const Header = () => {
                   margin: 0,
                 }}
               >
-                <NavItem href="/home" label="HOME" />
-                <NavItem href="/about" label="ABOUT" />
-                <NavItem href="/member" label="MEMBER" />
-                <NavItem href="/match" label="MATCH" />
-                <NavItem href="/sns" label="SNS" />
-                <NavItem href="/news" label="NEWS" />
-                <NavItem href="/schedule" label="SCHEDULE" />
+                {NavItemList.map((Item) => (
+                  <Fragment key={Item.href}>
+                    <NavItem href={Item.href} label={Item.title} />
+                  </Fragment>
+                ))}
               </List>
             </Box>
           </Drawer>
