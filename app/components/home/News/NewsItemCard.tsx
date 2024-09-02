@@ -1,4 +1,3 @@
-import React from "react";
 import { NewsDataProps } from "./NewsData";
 import { Typography } from "@mui/material";
 
