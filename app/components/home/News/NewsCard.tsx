@@ -3,7 +3,7 @@ import React, { Fragment } from "react";
 import { NewsData } from "./NewsData";
 import Heading from "../../common/Heading";
 import NewsItemCard from "./NewsItemCard";
-import NewsTitle from "./NewsTitle ";
+import News from "./News";
 
 const NewsCard = () => {
   return (
@@ -15,7 +15,7 @@ const NewsCard = () => {
         justifyContent={"center"}
         spacing={{ xs: 3, md: 5 }}
       >
-        <NewsTitle />
+        <News />
         <Grid item xs={10} md={3.5}>
           <Box pb={{ xs: 3, md: 5 }}>
             <Heading title="NEWS" />

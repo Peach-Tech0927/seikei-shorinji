@@ -5,7 +5,7 @@ import NewsCard from "./NewsItemCard";
 import { NewsData } from "./NewsData";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 
-const NewsTitle = () => {
+const News = () => {
   return (
     <>
       <Grid item xs={10} md={3.5}>
@@ -54,4 +54,4 @@ const NewsTitle = () => {
   );
 };
 
-export default NewsTitle;
+export default News;
