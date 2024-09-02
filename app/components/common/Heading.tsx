@@ -10,7 +10,6 @@ const Heading: React.FC<Tprops> = ({ title }) => {
       <Typography fontSize={{ xs: 18, md: 25 }} pb={0.5} fontWeight={"bold"}>
         {title}
       </Typography>
-      <Box width="100%" height={1.2} bgcolor="#00154b" />
     </Box>
   );
 };
