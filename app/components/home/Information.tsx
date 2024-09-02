@@ -1,11 +1,11 @@
 import { Box, Divider, Grid, Link, Typography } from "@mui/material";
 import React, { Fragment } from "react";
-import { NewsData } from "./NewsData";
-import Heading from "../../common/Heading";
-import NewsItemCard from "./NewsItemCard";
-import News from "./News";
+import { NewsData } from "./News/NewsData";
+import Heading from "../common/Heading";
+import NewsItemCard from "./News/NewsItemCard";
+import News from "./News/News";
 
-const NewsCard = () => {
+const Information = () => {
   return (
     <>
       <Grid
@@ -44,4 +44,4 @@ const NewsCard = () => {
   );
 };
 
-export default NewsCard;
+export default Information;
