@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body style={{ margin: 0, fontFamily: inter.style.fontFamily }}>
         <Header />
-        <main>{children}</main>
+        {children}
         <Footer />
       </body>
     </html>
