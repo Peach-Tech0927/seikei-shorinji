@@ -7,10 +7,11 @@ import {
   FooterItemListC,
 } from "@/app/data/FooterItemList";
 
-const Footer = () => {
+const footer = () => {
   return (
     <>
       <AppBar
+        component={"footer"}
         position="static"
         color="inherit"
         sx={{
@@ -115,4 +116,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default footer;
