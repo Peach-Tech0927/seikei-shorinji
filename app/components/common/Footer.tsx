@@ -1,7 +1,5 @@
 "use client";
-import React, { useState } from "react";
 import { AppBar, Toolbar, Typography, Box, Grid } from "@mui/material";
-
 import Image from "next/image";
 import CustomLink from "./CustomLink";
 import {
@@ -14,6 +12,7 @@ const Footer = () => {
   return (
     <>
       <AppBar
+        component={Footer}
         position="static"
         color="inherit"
         sx={{
@@ -81,42 +80,36 @@ const Footer = () => {
 
             <Grid container spacing={9}>
               <Grid item xs={6} sm={4}>
-                <Box color="white">
-                  <Typography variant="h6" mb={1}>
-                    AAAAAAA
-                  </Typography>
-                  {FooterItemListA.map((Item) => (
-                    <Box key={Item.href} sx={{ mb: 1 }}>
-                      <CustomLink href={Item.href}>{Item.title}</CustomLink>
-                    </Box>
-                  ))}
-                </Box>
+                <Typography variant="h6" mb={1} color={"white"}>
+                  AAAAAAA
+                </Typography>
+                {FooterItemListA.map((Item) => (
+                  <Box key={Item.href} sx={{ mb: 1 }}>
+                    <CustomLink href={Item.href}>{Item.title}</CustomLink>
+                  </Box>
+                ))}
               </Grid>
 
               <Grid item xs={6} sm={4}>
-                <Box color="white">
-                  <Typography variant="h6" mb={1}>
-                    BBBBBBBB
-                  </Typography>
-                  {FooterItemListB.map((Item) => (
-                    <Box key={Item.href} mb={1}>
-                      <CustomLink href={Item.href}>{Item.title}</CustomLink>
-                    </Box>
-                  ))}
-                </Box>
+                <Typography variant="h6" mb={1} color={"white"}>
+                  BBBBBBBB
+                </Typography>
+                {FooterItemListB.map((Item) => (
+                  <Box key={Item.href} mb={1}>
+                    <CustomLink href={Item.href}>{Item.title}</CustomLink>
+                  </Box>
+                ))}
               </Grid>
 
               <Grid item xs={12} sm={4}>
-                <Box color="white">
-                  <Typography variant="h6" mb={1}>
-                    CCCCCCCCCCC
-                  </Typography>
-                  {FooterItemListC.map((Item) => (
-                    <Box key={Item.href} mb={1}>
-                      <CustomLink href={Item.href}>{Item.title}</CustomLink>
-                    </Box>
-                  ))}
-                </Box>
+                <Typography variant="h6" mb={1} color={"white"}>
+                  CCCCCCCCCCC
+                </Typography>
+                {FooterItemListC.map((Item) => (
+                  <Box key={Item.href} mb={1}>
+                    <CustomLink href={Item.href}>{Item.title}</CustomLink>
+                  </Box>
+                ))}
               </Grid>
             </Grid>
           </Box>
