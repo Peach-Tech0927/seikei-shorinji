@@ -1,4 +1,3 @@
-"use client";
 import { AppBar, Toolbar, Typography, Box, Grid } from "@mui/material";
 import Image from "next/image";
 import CustomLink from "./CustomLink";
@@ -12,7 +11,6 @@ const Footer = () => {
   return (
     <>
       <AppBar
-        component={Footer}
         position="static"
         color="inherit"
         sx={{
@@ -23,7 +21,6 @@ const Footer = () => {
           py={"10px"}
           textAlign={"center"}
           mb={"20px"}
-          position={"relative"}
           bgcolor={"#fff"}
           borderTop={"5px double #F58220"}
           borderBottom={"5px double #F58220"}
@@ -39,7 +36,6 @@ const Footer = () => {
 
         <Toolbar
           sx={{
-            display: "flex",
             flexDirection: "column",
             px: { xs: 1, sm: 2, md: 4 },
             py: 2,
