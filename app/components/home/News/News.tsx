@@ -9,13 +9,16 @@ const News = () => {
   return (
     <>
       <Grid item xs={10} md={3.5}>
-        <Link href="/more" underline="none">
+        <Link href="/more" underline="none"></Link>
+        <Box position={"relative"} pb={{ xs: 3, md: 5 }}>
+          <Heading title="NEWS" />
           <Box
+            position={"absolute"}
             display={"flex"}
             justifyContent={"flex-end"}
             alignItems={"center"}
-            marginBottom={{ xs: -3.5, md: -4 }}
-            marginTop={{ md: 1 }}
+            top={6}
+            right={0}
           >
             <Typography
               fontSize={{ xs: 13, md: 16 }}
@@ -26,9 +29,6 @@ const News = () => {
             </Typography>
             <ChevronRightIcon fontSize="medium" sx={{ color: "#a20100" }} />
           </Box>
-        </Link>
-        <Box pb={{ xs: 3, md: 5 }}>
-          <Heading title="NEWS" />
           <Box width="100%" height={1.2} bgcolor="#00154b" />
         </Box>
         <Box>
