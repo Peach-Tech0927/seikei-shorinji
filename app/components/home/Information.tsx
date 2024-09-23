@@ -15,7 +15,10 @@ const Information = () => {
         justifyContent={"center"}
         spacing={{ xs: 3, md: 5 }}
       >
-        <News />
+        <Grid item xs={10} md={3.5}>
+          <News />
+        </Grid>
+
         <Grid item xs={10} md={3.5}>
           <Box pb={{ xs: 3, md: 5 }}>
             <Heading title="NEWS" />
