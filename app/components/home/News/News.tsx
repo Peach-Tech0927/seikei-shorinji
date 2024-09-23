@@ -8,7 +8,7 @@ import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 const News = () => {
   return (
     <>
-      <Link href="/more" underline="none"></Link>
+      <Link href="/more" underline="none" />
       <Box position={"relative"} pb={{ xs: 3, md: 5 }}>
         <Heading title="NEWS" />
         <Box
