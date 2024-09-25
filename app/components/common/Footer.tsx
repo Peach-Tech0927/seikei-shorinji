@@ -6,6 +6,7 @@ import {
   FooterItemListB,
   FooterItemListC,
 } from "@/app/data/FooterItemList";
+import FooterColumn from "./FooterColumn";
 
 const footer = () => {
   return (
@@ -76,38 +77,9 @@ const footer = () => {
             </Box>
 
             <Grid container spacing={9}>
-              <Grid item xs={6} sm={4}>
-                <Typography variant="h6" mb={1} color={"white"}>
-                  AAAAAAA
-                </Typography>
-                {FooterItemListA.map((Item) => (
-                  <Box key={Item.href} sx={{ mb: 1 }}>
-                    <CustomLink href={Item.href}>{Item.title}</CustomLink>
-                  </Box>
-                ))}
-              </Grid>
-
-              <Grid item xs={6} sm={4}>
-                <Typography variant="h6" mb={1} color={"white"}>
-                  BBBBBBBB
-                </Typography>
-                {FooterItemListB.map((Item) => (
-                  <Box key={Item.href} mb={1}>
-                    <CustomLink href={Item.href}>{Item.title}</CustomLink>
-                  </Box>
-                ))}
-              </Grid>
-
-              <Grid item xs={12} sm={4}>
-                <Typography variant="h6" mb={1} color={"white"}>
-                  CCCCCCCCCCC
-                </Typography>
-                {FooterItemListC.map((Item) => (
-                  <Box key={Item.href} mb={1}>
-                    <CustomLink href={Item.href}>{Item.title}</CustomLink>
-                  </Box>
-                ))}
-              </Grid>
+              <FooterColumn title="AAAAAAA" items={FooterItemListA} />
+              <FooterColumn title="BBBBBBBB" items={FooterItemListB} />
+              <FooterColumn title="CCCCCCCCCCC" items={FooterItemListC} />
             </Grid>
           </Box>
         </Toolbar>
