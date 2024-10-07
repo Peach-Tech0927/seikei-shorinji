@@ -1,14 +1,20 @@
 import { AppBar, Toolbar, Typography, Box, Grid } from "@mui/material";
 import Image from "next/image";
-import CustomLink from "./CustomLink";
 import {
   FooterItemListA,
   FooterItemListB,
   FooterItemListC,
 } from "@/app/data/FooterItemList";
 import FooterColumn from "./FooterColumn";
+import CustomLink from "./CustomLink";
 
-const footer = () => {
+const footerColumns = [
+  { title: "AAAAAAA", items: FooterItemListA },
+  { title: "BBBBBBBB", items: FooterItemListB },
+  { title: "CCCCCCCCCCC", items: FooterItemListC },
+];
+
+const Footer = () => {
   return (
     <>
       <AppBar
@@ -77,9 +83,16 @@ const footer = () => {
             </Box>
 
             <Grid container spacing={9}>
-              <FooterColumn title="AAAAAAA" items={FooterItemListA} />
-              <FooterColumn title="BBBBBBBB" items={FooterItemListB} />
-              <FooterColumn title="CCCCCCCCCCC" items={FooterItemListC} />
+              {footerColumns.map((column, index) => (
+                <Grid item xs={6} sm={4} key={index}>
+                  <FooterColumn title={column.title} />
+                  {column.items.map((item) => (
+                    <Box key={item.href} mb={1}>
+                      <CustomLink href={item.href}>{item.title}</CustomLink>
+                    </Box>
+                  ))}
+                </Grid>
+              ))}
             </Grid>
           </Box>
         </Toolbar>
@@ -88,4 +101,4 @@ const footer = () => {
   );
 };
 
-export default footer;
+export default Footer;
