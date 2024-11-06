@@ -5,11 +5,11 @@ export type NavItem = {
 
 export const NavItemList: NavItem[] = [
   {
-    href: "/home",
+    href: "/",
     title: "HOME",
   },
   {
-    href: "/about",
+    href: "/page1",
     title: "ABOUT",
   },
   {
