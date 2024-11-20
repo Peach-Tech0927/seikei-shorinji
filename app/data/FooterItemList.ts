@@ -5,11 +5,11 @@ export type FooterItem = {
 
 export const FooterItemListA: FooterItem[] = [
   {
-    href: "/home",
+    href: "/",
     title: "> HOME",
   },
   {
-    href: "/about",
+    href: "/About",
     title: "> ABOUT",
   },
   {
