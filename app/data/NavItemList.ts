@@ -9,7 +9,7 @@ export const NavItemList: NavItem[] = [
     title: "HOME",
   },
   {
-    href: "/About",
+    href: "/about",
     title: "ABOUT",
   },
   {

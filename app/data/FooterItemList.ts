@@ -9,7 +9,7 @@ export const FooterItemListA: FooterItem[] = [
     title: "> HOME",
   },
   {
-    href: "/About",
+    href: "/about",
     title: "> ABOUT",
   },
   {
