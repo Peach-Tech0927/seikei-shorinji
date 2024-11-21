@@ -1,8 +1,13 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { AppBar, Box, Grid, Typography, Container, Paper } from "@mui/material";
 
-const Page1: React.FC = () => {
+const Page: React.FC = () => {
+  const mapRef = useRef<HTMLDivElement | null>(null);
+
   const environmentImages = [
     "https://user0514.cdnw.net/shared/img/thumb/aig-ai230531008-xl_TP_V.jpg",
     "https://th.bing.com/th/id/OIP.wIUxzLQ6VEPwpxjfer-VtQEsDH?rs=1&pid=ImgDetMain",
@@ -12,12 +17,31 @@ const Page1: React.FC = () => {
     "https://user0514.cdnw.net/shared/img/thumb/aig-ai230531008-xl_TP_V.jpg",
   ];
 
+  const loadMap = () => {
+    const { google } = window;
+    if (google && mapRef.current) {
+      new google.maps.Map(mapRef.current, {
+        center: { lat: 35.42, lng: 139.34 },
+        zoom: 16,
+      });
+    }
+  };
+
+  useEffect(() => {
+    if (!window.google) {
+      const script = document.createElement("script");
+      script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyCAqztwgSizRm6u9AH5Gd-WUdgJOvXi6sI`;
+      script.async = true;
+      script.onload = loadMap;
+      document.head.appendChild(script);
+    } else {
+      loadMap();
+    }
+  }, []);
+
   return (
     <>
-      <AppBar
-        position="sticky"
-        sx={{ boxShadow: 0, bgcolor: "transparent", height: "auto" }}
-      >
+      <AppBar position="sticky" sx={{ boxShadow: 0, bgcolor: "transparent" }}>
         <Box
           sx={{
             backgroundImage:
@@ -51,23 +75,38 @@ const Page1: React.FC = () => {
         sx={{ fontFamily: "Arial, sans-serif", bgcolor: "#f9f9f9", px: 4 }}
       >
         <Box>
-          <nav
-            style={{
-              marginBottom: "2rem",
+          <Box
+            sx={{
+              mb: 4,
               fontSize: "1.2rem",
               color: "#555",
               textTransform: "uppercase",
             }}
           >
-            <Typography component="h4">
-              <Link href="/" style={{ color: "#555" }}>
-                HOME
-              </Link>{" "}
-              {">"} ABOUT
+            <Typography component="h4" sx={{ color: "#555" }}>
+              <Link href="/">
+                <Typography
+                  component="span"
+                  sx={{
+                    color: "#555",
+                  }}
+                >
+                  HOME
+                </Typography>
+              </Link>
+              {" > "}
+              <Typography
+                component="span"
+                sx={{
+                  color: "#555",
+                }}
+              >
+                ABOUT
+              </Typography>
             </Typography>
-          </nav>
+          </Box>
 
-          <Box style={{ marginBottom: "3rem" }}>
+          <Box sx={{ mb: 4 }}>
             <Typography
               variant="h5"
               sx={{
@@ -88,7 +127,7 @@ const Page1: React.FC = () => {
             </Typography>
           </Box>
 
-          <Box style={{ marginBottom: "3rem" }}>
+          <Box sx={{ mb: 4 }}>
             <Typography
               variant="h5"
               sx={{
@@ -111,7 +150,7 @@ const Page1: React.FC = () => {
             </Typography>
           </Box>
 
-          <Box style={{ marginBottom: "3rem" }}>
+          <Box sx={{ mb: 4 }}>
             <Typography
               variant="h5"
               sx={{
@@ -126,8 +165,8 @@ const Page1: React.FC = () => {
               活動内容
             </Typography>
             <Box
-              style={{
-                paddingTop: "1rem",
+              sx={{
+                pt: 2,
                 listStyleType: "disc",
                 fontSize: "1.2rem",
                 color: "#555",
@@ -137,7 +176,7 @@ const Page1: React.FC = () => {
             </Box>
           </Box>
 
-          <Box style={{ marginBottom: "3rem" }}>
+          <Box sx={{ mb: 4 }}>
             <Typography
               variant="h5"
               sx={{
@@ -160,7 +199,7 @@ const Page1: React.FC = () => {
             </Typography>
           </Box>
 
-          <Box style={{ marginBottom: "3rem" }}>
+          <Box sx={{ mb: 4 }}>
             <Typography
               variant="h5"
               sx={{
@@ -181,7 +220,7 @@ const Page1: React.FC = () => {
             </Typography>
           </Box>
 
-          <Box style={{ marginBottom: "3rem" }}>
+          <Box sx={{ mb: 4 }}>
             <Typography
               variant="h5"
               sx={{
@@ -202,7 +241,7 @@ const Page1: React.FC = () => {
             </Typography>
           </Box>
 
-          <Box style={{ marginBottom: "3rem" }}>
+          <Box sx={{ mb: 4 }}>
             <Typography
               variant="h5"
               sx={{
@@ -226,22 +265,22 @@ const Page1: React.FC = () => {
                       boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
                     }}
                   >
-                    <img
-                      src={image}
-                      alt={`環境画像 ${index + 1}`}
-                      style={{
-                        width: "100%",
-                        height: "auto",
-                        borderRadius: "8px",
-                      }}
-                    />
+                    <Box sx={{ width: "100%", height: "auto" }}>
+                      <Image
+                        src={image}
+                        alt={`Environment image ${index + 1}`}
+                        width={500}
+                        height={300}
+                        layout="responsive"
+                      />
+                    </Box>
                   </Paper>
                 </Grid>
               ))}
             </Grid>
           </Box>
 
-          <Box style={{ marginBottom: "3rem" }}>
+          <Box sx={{ mb: 4 }}>
             <Typography
               variant="h5"
               sx={{
@@ -264,14 +303,7 @@ const Page1: React.FC = () => {
             </Typography>
 
             <Box sx={{ mt: 2, borderRadius: "8px", overflow: "hidden" }}>
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.5037631415016!2d139.57131077598044!3d35.71382732818242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018ee522d0b612d%3A0xaadc4b6ba9248642!2z5oiQ6LmK5aSn5a2m!5e0!3m2!1sja!2sjp!4v1730874950995!5m2!1sja!2sjp"
-                width="100%"
-                height="450"
-                style={{ border: "0" }}
-                allowFullScreen
-                loading="lazy"
-              ></iframe>
+              <Box ref={mapRef} sx={{ width: "100%", height: "450px" }}></Box>
             </Box>
           </Box>
         </Box>
@@ -280,4 +312,4 @@ const Page1: React.FC = () => {
   );
 };
 
-export default Page1;
+export default Page;
