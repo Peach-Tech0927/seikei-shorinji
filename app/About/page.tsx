@@ -303,7 +303,7 @@ const Page: React.FC = () => {
             </Typography>
 
             <Box sx={{ mt: 2, borderRadius: "8px", overflow: "hidden" }}>
-              <Box ref={mapRef} sx={{ width: "100%", height: "450px" }}></Box>
+              <Box ref={mapRef} sx={{ width: "100%", height: "450px" }} />
             </Box>
           </Box>
         </Box>
