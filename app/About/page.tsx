@@ -9,12 +9,12 @@ const Page: React.FC = () => {
   const mapRef = useRef<HTMLDivElement | null>(null);
 
   const environmentImages = [
-    "https://user0514.cdnw.net/shared/img/thumb/aig-ai230531008-xl_TP_V.jpg",
-    "https://th.bing.com/th/id/OIP.wIUxzLQ6VEPwpxjfer-VtQEsDH?rs=1&pid=ImgDetMain",
-    "https://user0514.cdnw.net/shared/img/thumb/aig-ai230531008-xl_TP_V.jpg",
-    "https://user0514.cdnw.net/shared/img/thumb/aig-ai230531008-xl_TP_V.jpg",
-    "https://user0514.cdnw.net/shared/img/thumb/aig-ai230531008-xl_TP_V.jpg",
-    "https://user0514.cdnw.net/shared/img/thumb/aig-ai230531008-xl_TP_V.jpg",
+    "/1536-960.png",
+    "/1536-960.png",
+    "/1536-960.png",
+    "/1536-960.png",
+    "/1536-960.png",
+    "/1536-960.png",
   ];
 
   const loadMap = () => {
