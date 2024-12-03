@@ -5,7 +5,7 @@ export type NavItem = {
 
 export const NavItemList: NavItem[] = [
   {
-    href: "/home",
+    href: "/",
     title: "HOME",
   },
   {
